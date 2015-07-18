@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 
     static int scoreTeamA = 0;
+    static int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +49,53 @@ public class MainActivity extends ActionBarActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void plusThreePoints(View view) {
+    public void plusThreePointsForTeamA(View view) {
         scoreTeamA += 3;
         displayForTeamA(scoreTeamA);
     }
 
-    public void plusTwoPoints(View view) {
+    public void plusTwoPointsForTeamA(View view) {
         scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
 
-    public void freeThrow(View view) {
+    public void freeThrowForTeamA(View view) {
         scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
     }
+
+    /**
+     * Displays the given score for Team B.
+     */
+    public void displayForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        scoreView.setText(String.valueOf(score));
+    }
+
+
+    public void plusThreePointsForTeamB(View view) {
+        scoreTeamB += 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void plusTwoPointsForTeamB(View view) {
+        scoreTeamB += 2;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void freeThrowForTeamB(View view) {
+        scoreTeamB += 1;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /**
+     * Resets the scores of both the teams.
+     */
+    public void resetScores(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
+
 }
