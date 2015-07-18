@@ -14,29 +14,33 @@
         android:textColor="#000000" />
 
     <TextView
+        android:id="@+id/team_a_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:gravity="center_horizontal"
-        android:text="3"
+        android:text="0"
         android:textColor="#000000" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="plusThreePoints"
         android:text="+3 Points" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="plusTwoPoints"
         android:text="+2 Points" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="freeThrow"
         android:text="Free Throw" />
 
 </LinearLayout>
